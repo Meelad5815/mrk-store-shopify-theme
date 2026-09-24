@@ -18,6 +18,18 @@
     {%- render 'view-transition-opt-in' -%}
 
     {%- render 'meta-tags' -%}
+    <meta name="theme-color" content="#071a33">
+    <meta name="description" content="{{ settings.mrk_short_description | default: shop.description | escape }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"Organization",
+        "name":{{ shop.name | json }},
+        "url":{{ request.origin | append: request.path | json }},
+        "description":{{ settings.mrk_short_description | default: shop.description | json }}
+      }
+    </script>
     {%- render 'stylesheets' -%}
     {{ 'mrk-brand.css' | asset_url | stylesheet_tag }}
     {%- render 'card-hover-effect-styles' -%}
@@ -168,6 +180,12 @@
 
     {% render 'cart-drawer', render_wrapper: true %}
     {% render 'theme-drawer' %}
+
+    {% if settings.mrk_show_whatsapp and settings.mrk_whatsapp != blank %}
+      <a class="mrk-floating-whatsapp" href="https://wa.me/{{ settings.mrk_whatsapp | remove: '+' | remove: ' ' }}" target="_blank" rel="noopener" aria-label="Chat with MRK on WhatsApp">
+        <span aria-hidden="true">WA</span><span>WhatsApp</span>
+      </a>
+    {% endif %}
 
     {% render 'search-modal' %}
 
