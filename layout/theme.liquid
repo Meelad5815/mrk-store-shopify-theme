@@ -20,13 +20,12 @@
     {%- render 'meta-tags' -%}
     <meta name="theme-color" content="#071a33">
     <meta name="description" content="{{ settings.mrk_short_description | default: shop.description | escape }}">
-    <link rel="canonical" href="{{ canonical_url }}">
     <script type="application/ld+json">
       {
         "@context":"https://schema.org",
         "@type":"Organization",
         "name":{{ shop.name | json }},
-        "url":{{ request.origin | append: request.path | json }},
+        "url":{{ canonical_url | json }},
         "description":{{ settings.mrk_short_description | default: shop.description | json }}
       }
     </script>
