@@ -1,91 +1,147 @@
 <section class="mrk-home">
   <div class="mrk-hero">
     <div class="mrk-container mrk-hero-grid">
-      <div>
+      <div class="mrk-hero-copy">
         <span class="mrk-eyebrow">MRK Digital Store</span>
-        <h1>Digital Solutions, Products & Technology Services</h1>
-        <p>Web & app development, graphic design, PLC & Arduino solutions, digital products and practical technology services — all in one place.</p>
+        <h1>{{ settings.mrk_tagline | default: 'Digital Solutions, Products & Technology Services' }}</h1>
+        <p>{{ settings.mrk_short_description | default: 'Web & app development, graphic design, PLC & Arduino solutions, digital products and practical technology services — all in one place.' }}</p>
         <div class="mrk-actions">
           <a class="mrk-btn mrk-btn-primary" href="{{ routes.all_products_collection_url }}">Explore Store</a>
-          <a class="mrk-btn mrk-btn-secondary" href="/pages/contact">Contact MRK</a>
+          <a class="mrk-btn mrk-btn-secondary" href="{{ settings.mrk_services_url | default: '/pages/services' }}">View Services</a>
+          {% if settings.mrk_show_whatsapp and settings.mrk_whatsapp != blank %}
+            <a class="mrk-btn mrk-btn-whatsapp" href="https://wa.me/{{ settings.mrk_whatsapp | remove: '+' | remove: ' ' }}" target="_blank" rel="noopener">WhatsApp</a>
+          {% endif %}
+        </div>
+        <div class="mrk-hero-points">
+          <span>✓ Business Websites</span><span>✓ Digital Products</span><span>✓ Automation Projects</span>
         </div>
       </div>
       <div class="mrk-hero-card">
+        <div class="mrk-hero-card-label">MRK Technology</div>
         <strong>Build. Design. Automate.</strong>
-        <p>Professional digital work for businesses, creators, students and technology projects.</p>
+        <p>Practical technology solutions for businesses, creators, students and real-world projects.</p>
+        <div class="mrk-mini-stats">
+          <div><b>Web</b><span>Sites & Stores</span></div>
+          <div><b>App</b><span>Software Solutions</span></div>
+          <div><b>PLC</b><span>Automation</span></div>
+          <div><b>Design</b><span>Creative Work</span></div>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="mrk-trust-strip">
+    <div class="mrk-container mrk-trust-grid">
+      <div><strong>Services</strong><span>Project-based work</span></div>
+      <div><strong>Store</strong><span>Digital & downloadable products</span></div>
+      <div><strong>Blog</strong><span>Useful technology guides</span></div>
+      <div><strong>Contact</strong><span>Direct project inquiry</span></div>
     </div>
   </div>
 
   <div class="mrk-section">
     <div class="mrk-container">
       <div class="mrk-section-head">
-        <div><h2>Our Services</h2><p>From websites and apps to automation and creative design.</p></div>
+        <div><span class="mrk-kicker">WHAT WE DO</span><h2>Professional Services</h2><p>Choose a service and send your requirements. Services can also be sold as Shopify products with price, images and checkout.</p></div>
+        <a class="mrk-text-link" href="{{ settings.mrk_services_url | default: '/pages/services' }}">All services →</a>
       </div>
-      <div class="mrk-grid">
-        <article class="mrk-card"><div class="mrk-card-icon">🌐</div><h3>Web Development</h3><p>Responsive business websites, stores, landing pages and custom web applications.</p></article>
-        <article class="mrk-card"><div class="mrk-card-icon">📱</div><h3>App Development</h3><p>Practical mobile and software solutions designed around real user needs.</p></article>
-        <article class="mrk-card"><div class="mrk-card-icon">⚙️</div><h3>PLC & Arduino</h3><p>Automation, controllers, sensors, relay systems and custom electronics projects.</p></article>
-        <article class="mrk-card"><div class="mrk-card-icon">🎨</div><h3>Graphic Design</h3><p>Professional social posts, business cards, invitations, banners and digital graphics.</p></article>
-        <article class="mrk-card"><div class="mrk-card-icon">💻</div><h3>Software Services</h3><p>Computer, website and software support with practical troubleshooting.</p></article>
-        <article class="mrk-card"><div class="mrk-card-icon">🛒</div><h3>Digital Products</h3><p>Downloadable templates, guides, resources and project files for digital work.</p></article>
+      <div class="mrk-grid mrk-service-grid">
+        <a class="mrk-card" href="{{ settings.mrk_services_url | default: '/pages/services' }}"><div class="mrk-card-icon">WEB</div><h3>Web Development</h3><p>Business websites, landing pages, e-commerce stores and custom web applications.</p><span>View service →</span></a>
+        <a class="mrk-card" href="{{ settings.mrk_services_url | default: '/pages/services' }}"><div class="mrk-card-icon">APP</div><h3>App Development</h3><p>Practical mobile and software solutions built around real user requirements.</p><span>View service →</span></a>
+        <a class="mrk-card" href="{{ settings.mrk_services_url | default: '/pages/services' }}"><div class="mrk-card-icon">PLC</div><h3>PLC & Arduino</h3><p>Controllers, sensors, relays, automation logic and electronics project solutions.</p><span>View service →</span></a>
+        <a class="mrk-card" href="{{ settings.mrk_services_url | default: '/pages/services' }}"><div class="mrk-card-icon">ART</div><h3>Graphic Design</h3><p>Cards, invitations, banners, social media creatives and business graphics.</p><span>View service →</span></a>
+        <a class="mrk-card" href="{{ settings.mrk_services_url | default: '/pages/services' }}"><div class="mrk-card-icon">IT</div><h3>Software & IT</h3><p>Website, computer and software support, troubleshooting and digital setup.</p><span>View service →</span></a>
+        <a class="mrk-card" href="{{ routes.all_products_collection_url }}"><div class="mrk-card-icon">PDF</div><h3>Digital Products</h3><p>Templates, guides, resources, project files and other downloadable products.</p><span>Shop products →</span></a>
       </div>
     </div>
   </div>
 
   {% if collections.all.products_count > 0 %}
-  <div class="mrk-section mrk-section-alt">
-    <div class="mrk-container">
-      <div class="mrk-section-head"><div><h2>Featured Products</h2><p>Explore the latest products and digital resources from MRK.</p></div><a class="mrk-btn mrk-btn-secondary" style="color:var(--mrk-navy);border-color:#cbd5e1" href="{{ routes.all_products_collection_url }}">View all</a></div>
-      <div class="mrk-products">
-        {% for product in collections.all.products limit:4 %}
-          <article class="mrk-product">
-            <a class="mrk-product-media" href="{{ product.url }}">
-              {% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 700 }}" alt="{{ product.featured_image.alt | escape | default: product.title | escape }}" loading="lazy">{% endif %}
-            </a>
-            <div class="mrk-product-body"><h3><a href="{{ product.url }}">{{ product.title }}</a></h3><div class="mrk-product-price">{{ product.price | money }}</div></div>
-          </article>
-        {% endfor %}
+    <div class="mrk-section mrk-section-alt">
+      <div class="mrk-container">
+        <div class="mrk-section-head">
+          <div><span class="mrk-kicker">SHOP</span><h2>Featured Products</h2><p>Add your digital products or services from Shopify Admin and they appear here automatically.</p></div>
+          <a class="mrk-text-link" href="{{ routes.all_products_collection_url }}">View all →</a>
+        </div>
+        <div class="mrk-products">
+          {% for product in collections.all.products limit:4 %}
+            <article class="mrk-product">
+              <a class="mrk-product-media" href="{{ product.url }}">
+                {% if product.featured_image %}
+                  <img src="{{ product.featured_image | image_url: width: 700 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy" width="700" height="700">
+                {% else %}
+                  <div class="mrk-product-placeholder">MRK</div>
+                {% endif %}
+              </a>
+              <div class="mrk-product-body">
+                <div class="mrk-product-type">{% if product.type != blank %}{{ product.type }}{% else %}Digital Product{% endif %}</div>
+                <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                <div class="mrk-product-row"><strong>{{ product.price | money }}</strong><span>View →</span></div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
   {% endif %}
 
   <div class="mrk-section">
     <div class="mrk-container">
       <div class="mrk-project">
         <div>
-          <span class="mrk-eyebrow">Featured Project</span>
+          <span class="mrk-eyebrow">FEATURED PROJECT</span>
           <h2>Automatic Water Tank Controller</h2>
-          <p>Water level sensors → Arduino/ESP32 → Relay → Motor/Pump. Designed for automatic ON/OFF control, overflow protection, dry-run protection and manual control.</p>
-          <a class="mrk-btn mrk-btn-primary" href="/pages/projects">View Projects</a>
+          <p>Water level sensors → Arduino/ESP32 → relay → motor/pump. The project concept includes automatic ON/OFF control, overflow protection, dry-run protection, manual control and fault indication.</p>
+          <a class="mrk-btn mrk-btn-primary" href="{{ settings.mrk_projects_url | default: '/pages/projects' }}">Explore Projects</a>
         </div>
-        <div class="mrk-project-diagram">Water Level Sensors<br>↓<br>Arduino / ESP32<br>↓<br>Relay Module<br>↓<br>Water Pump</div>
+        <div class="mrk-project-diagram">
+          <span>WATER LEVEL SENSORS</span><b>↓</b><span>ARDUINO / ESP32</span><b>↓</b><span>RELAY MODULE</span><b>↓</b><span>WATER PUMP</span>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="mrk-section mrk-section-alt">
     <div class="mrk-container">
-      <div class="mrk-section-head"><div><h2>MRK Tech Blog</h2><p>Useful guides about websites, software, electronics, automation and digital earning.</p></div></div>
-      <div class="mrk-blog-grid">
-        {% for article in blogs.blog.articles limit:3 %}
-          <article class="mrk-blog-card"><h3><a href="{{ article.url }}">{{ article.title }}</a></h3><p>{{ article.excerpt_or_content | strip_html | truncate: 140 }}</p></article>
-        {% else %}
-          <article class="mrk-blog-card"><h3>Web Development Guides</h3><p>Practical website development and deployment tutorials.</p></article>
-          <article class="mrk-blog-card"><h3>Arduino & PLC Projects</h3><p>Automation ideas, project breakdowns and implementation notes.</p></article>
-          <article class="mrk-blog-card"><h3>Digital Earning</h3><p>Guides for freelancing, digital products and online business.</p></article>
-        {% endfor %}
+      <div class="mrk-section-head">
+        <div><span class="mrk-kicker">KNOWLEDGE</span><h2>MRK Tech Blog</h2><p>Publish original guides about web development, Shopify, software, PLC, Arduino, freelancing and digital products.</p></div>
       </div>
+      {% assign mrk_blog = blogs[settings.mrk_blog_handle] %}
+      {% if settings.mrk_show_blog and mrk_blog != blank %}
+        <div class="mrk-blog-grid">
+          {% for article in mrk_blog.articles limit:3 %}
+            <article class="mrk-blog-card">
+              {% if article.image %}<a class="mrk-blog-image" href="{{ article.url }}"><img src="{{ article.image | image_url: width: 900 }}" alt="{{ article.image.alt | default: article.title | escape }}" loading="lazy" width="900" height="520"></a>{% endif %}
+              <div class="mrk-blog-body">
+                <div class="mrk-product-type">{{ article.published_at | date: '%d %b %Y' }}</div>
+                <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                <p>{{ article.excerpt_or_content | strip_html | truncate: 150 }}</p>
+                <a class="mrk-text-link" href="{{ article.url }}">Read article →</a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="mrk-empty-panel">
+          <strong>Your blog is ready for content.</strong>
+          <p>Create a Shopify blog (for example, “Blog”) and publish original helpful articles. Then set its handle in Theme Settings → MRK Digital Store.</p>
+        </div>
+      {% endif %}
     </div>
   </div>
 
   <div class="mrk-section">
     <div class="mrk-container">
       <div class="mrk-cta">
-        <h2>Have a project in mind?</h2>
-        <p>Tell MRK what you need — a website, app, design, automation project or digital product.</p>
-        <a class="mrk-btn mrk-btn-primary" href="/pages/contact">Start a Project</a>
+        <div><span class="mrk-kicker mrk-kicker-light">START A PROJECT</span><h2>Need a website, app, design or automation solution?</h2><p>Send your requirements directly. For paid services, add a service as a Shopify product so customers can review the offer and use the store checkout.</p></div>
+        <div class="mrk-actions">
+          <a class="mrk-btn mrk-btn-primary" href="{{ settings.mrk_services_url | default: '/pages/services' }}">Choose a Service</a>
+          {% if settings.mrk_show_whatsapp and settings.mrk_whatsapp != blank %}
+            <a class="mrk-btn mrk-btn-secondary" href="https://wa.me/{{ settings.mrk_whatsapp | remove: '+' | remove: ' ' }}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          {% else %}
+            <a class="mrk-btn mrk-btn-secondary" href="/pages/contact">Contact Form</a>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
