@@ -1,11 +1,5 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
+ * MRK Digital Store theme settings. Shopify may regenerate this file from the theme editor.
  */
 {
   "current": {
@@ -107,7 +101,16 @@
       "foreground": "#000000",
       "color1": "#333333",
       "color2": "#DFDFDF"
-    }
+    },
+    "mrk_tagline": "Digital Solutions, Products & Technology Services",
+    "mrk_short_description": "Web & app development, graphic design, PLC & Arduino solutions, digital products and practical technology services — all in one place.",
+    "mrk_whatsapp": "",
+    "mrk_email": "",
+    "mrk_blog_handle": "blog",
+    "mrk_projects_url": "/pages/projects",
+    "mrk_services_url": "/pages/services",
+    "mrk_show_whatsapp": true,
+    "mrk_show_blog": true
   },
   "presets": {
     "Horizon": {
@@ -209,7 +212,16 @@
         "foreground": "#000000",
         "color1": "#333333",
         "color2": "#DFDFDF"
-      }
+      },
+      "mrk_tagline": "Digital Solutions, Products & Technology Services",
+      "mrk_short_description": "Web & app development, graphic design, PLC & Arduino solutions, digital products and practical technology services — all in one place.",
+      "mrk_whatsapp": "",
+      "mrk_email": "",
+      "mrk_blog_handle": "blog",
+      "mrk_projects_url": "/pages/projects",
+      "mrk_services_url": "/pages/services",
+      "mrk_show_whatsapp": true,
+      "mrk_show_blog": true
     }
   }
 }
