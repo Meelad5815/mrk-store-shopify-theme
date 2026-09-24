@@ -85,3 +85,12 @@
 @media(max-width:1000px){.mrk-hero-grid,.mrk-project{grid-template-columns:1fr}.mrk-grid{grid-template-columns:repeat(2,1fr)}.mrk-products{grid-template-columns:repeat(2,1fr)}.mrk-blog-grid{grid-template-columns:1fr 1fr}.mrk-cta{display:block}.mrk-cta .mrk-actions{margin-top:22px}}
 @media(max-width:700px){.mrk-container{width:min(100% - 24px,1180px)}.mrk-hero{padding:62px 0 52px}.mrk-hero h1{font-size:clamp(36px,12vw,54px)}.mrk-hero p{font-size:16px}.mrk-section{padding:54px 0}.mrk-grid,.mrk-products,.mrk-blog-grid{grid-template-columns:1fr}.mrk-project,.mrk-cta{padding:26px}.mrk-section-head{display:block}.mrk-section-head .mrk-text-link{display:inline-block;margin-top:15px}.mrk-trust-grid{grid-template-columns:1fr 1fr}.mrk-trust-grid div:nth-child(2){border-right:0}.mrk-trust-grid div:nth-child(-n+2){border-bottom:1px solid var(--mrk-border)}}
 @media(max-width:420px){.mrk-actions{display:grid}.mrk-btn{width:100%}.mrk-mini-stats{grid-template-columns:1fr}.mrk-hero-points{display:grid;gap:8px}}
+
+.mrk-inner-page{background:#fff;color:var(--mrk-ink)}
+.mrk-inner-hero{background:linear-gradient(135deg,var(--mrk-navy),var(--mrk-blue));color:#fff;padding:62px 0}
+.mrk-inner-hero h1{color:#fff;font-size:clamp(38px,6vw,58px);line-height:1.05;margin:15px 0 12px}
+.mrk-inner-hero p{color:#dbe7f5;max-width:760px;line-height:1.7;margin:0;font-size:16px}
+.mrk-card h2{color:var(--mrk-navy);font-size:24px;margin:0 0 9px}
+.mrk-floating-whatsapp{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;align-items:center;gap:8px;background:#1f9d55;color:#fff!important;border-radius:999px;padding:12px 16px;text-decoration:none!important;font-size:12px;font-weight:900;box-shadow:0 10px 30px #00000022}
+.mrk-floating-whatsapp span:first-child{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#fff;color:#1f9d55;font-size:9px}
+@media(max-width:640px){.mrk-inner-hero{padding:48px 0}.mrk-floating-whatsapp{right:12px;bottom:12px;padding:11px 13px}.mrk-floating-whatsapp span:last-child{display:none}}
