@@ -8,7 +8,7 @@
         "announcement": {
           "type": "_announcement",
           "settings": {
-            "text": "MRK Digital Store — Digital Products & Technology Services",
+            "text": "MRK Digital Store — Services • Digital Products • Web • App • PLC • Arduino • Design",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "letter_spacing": "normal",
@@ -17,7 +17,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["announcement"],
+      "block_order": [
+        "announcement"
+      ],
       "settings": {
         "speed": 5,
         "section_width": "page-width",
@@ -34,7 +36,11 @@
         "header-logo": {
           "type": "_header-logo",
           "static": true,
-          "settings": {"hide_logo_on_home_page": false,"padding-block-start": 0,"padding-block-end": 0},
+          "settings": {
+            "hide_logo_on_home_page": false,
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
           "blocks": {}
         },
         "header-menu": {
@@ -81,5 +87,8 @@
       }
     }
   },
-  "order": ["announcement","header_section"]
+  "order": [
+    "announcement",
+    "header_section"
+  ]
 }
