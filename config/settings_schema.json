@@ -1,9 +1,9 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Horizon",
-    "theme_version": "4.2.0",
-    "theme_author": "Shopify",
+    "theme_name": "MRK Digital Store",
+    "theme_version": "5.0.0",
+    "theme_author": "MRK OFFICIAL",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -2114,6 +2114,67 @@
           }
         ],
         "default": "equal-width-buttons"
+      }
+    ]
+  },
+  {
+    "name": "MRK Digital Store",
+    "settings": [
+      {
+        "type": "text",
+        "id": "mrk_tagline",
+        "label": "Store tagline",
+        "default": "Digital Solutions, Products & Technology Services"
+      },
+      {
+        "type": "textarea",
+        "id": "mrk_short_description",
+        "label": "Short description",
+        "default": "Web & app development, graphic design, PLC & Arduino solutions, digital products and practical technology services — all in one place."
+      },
+      {
+        "type": "text",
+        "id": "mrk_whatsapp",
+        "label": "WhatsApp number",
+        "info": "Use international format without + or spaces. Leave blank to hide WhatsApp buttons.",
+        "default": ""
+      },
+      {
+        "type": "text",
+        "id": "mrk_email",
+        "label": "Business email",
+        "default": ""
+      },
+      {
+        "type": "text",
+        "id": "mrk_blog_handle",
+        "label": "Blog handle",
+        "info": "Example: blog or news. Leave blank to hide blog cards.",
+        "default": "blog"
+      },
+      {
+        "type": "url",
+        "id": "mrk_projects_url",
+        "label": "Projects page URL",
+        "default": "/pages/projects"
+      },
+      {
+        "type": "url",
+        "id": "mrk_services_url",
+        "label": "Services page URL",
+        "default": "/pages/services"
+      },
+      {
+        "type": "checkbox",
+        "id": "mrk_show_whatsapp",
+        "label": "Show WhatsApp contact buttons",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "mrk_show_blog",
+        "label": "Show blog section",
+        "default": true
       }
     ]
   }
