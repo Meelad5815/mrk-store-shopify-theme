@@ -1,0 +1,48 @@
+/* MRK Digital Store — WordPress-inspired brand layer */
+:root{--mrk-navy:#071a33;--mrk-blue:#0d2f57;--mrk-gold:#d7a83f;--mrk-gold-soft:#f5e6b8;--mrk-ink:#111827;--mrk-muted:#64748b;--mrk-bg:#f7f9fc;--mrk-white:#fff;--mrk-radius:18px}
+.mrk-home{color:var(--mrk-ink);background:var(--mrk-white);font-family:var(--font-body--family),system-ui,sans-serif}
+.mrk-container{width:min(1180px,calc(100% - 32px));margin:auto}
+.mrk-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--mrk-navy),var(--mrk-blue));color:#fff;padding:88px 0 76px}
+.mrk-hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #d7a83f55;border-radius:50%;right:-140px;top:-180px;box-shadow:0 0 0 70px #d7a83f0d,0 0 0 140px #d7a83f08}
+.mrk-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.mrk-eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #d7a83f66;border-radius:999px;color:var(--mrk-gold-soft);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mrk-hero h1{font-size:clamp(38px,6vw,68px);line-height:1.03;margin:18px 0 20px;color:#fff}
+.mrk-hero p{font-size:18px;line-height:1.7;color:#e7eef8;max-width:680px;margin:0 0 28px}
+.mrk-actions{display:flex;gap:12px;flex-wrap:wrap}
+.mrk-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid transparent}
+.mrk-btn-primary{background:var(--mrk-gold);color:#111}
+.mrk-btn-secondary{background:transparent;color:#fff;border-color:#ffffff55}
+.mrk-hero-card{background:#ffffff12;border:1px solid #ffffff22;border-radius:24px;padding:28px;backdrop-filter:blur(10px)}
+.mrk-hero-card strong{display:block;font-size:28px;color:var(--mrk-gold-soft);margin-bottom:8px}
+.mrk-hero-card p{font-size:14px;margin:0;color:#dbe7f5}
+.mrk-section{padding:72px 0}
+.mrk-section-alt{background:var(--mrk-bg)}
+.mrk-section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}
+.mrk-section-head h2{margin:0;font-size:clamp(28px,4vw,42px);color:var(--mrk-navy)}
+.mrk-section-head p{margin:8px 0 0;color:var(--mrk-muted);max-width:650px}
+.mrk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mrk-card{background:#fff;border:1px solid #e5eaf1;border-radius:var(--mrk-radius);padding:24px;box-shadow:0 8px 30px #0b1f3a0a}
+.mrk-card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:var(--mrk-gold-soft);color:var(--mrk-navy);font-size:23px;margin-bottom:16px}
+.mrk-card h3{margin:0 0 8px;color:var(--mrk-navy);font-size:20px}
+.mrk-card p{margin:0;color:var(--mrk-muted);line-height:1.65;font-size:14px}
+.mrk-products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mrk-product{border:1px solid #e5eaf1;border-radius:16px;overflow:hidden;background:#fff}
+.mrk-product-media{aspect-ratio:1/1;background:#eef3f8;display:block}
+.mrk-product-media img{width:100%;height:100%;object-fit:cover;display:block}
+.mrk-product-body{padding:16px}
+.mrk-product-body h3{font-size:16px;margin:0 0 7px;color:var(--mrk-navy)}
+.mrk-product-price{font-weight:800;color:var(--mrk-blue)}
+.mrk-project{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--mrk-navy);color:#fff;border-radius:24px;padding:34px}
+.mrk-project h2{margin:0 0 10px;color:#fff}
+.mrk-project p{color:#dbe7f5;line-height:1.7}
+.mrk-project-diagram{border:1px solid #ffffff1f;border-radius:18px;padding:24px;text-align:center;background:#ffffff08;font-weight:700;line-height:2;color:var(--mrk-gold-soft)}
+.mrk-blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mrk-blog-card{border:1px solid #e5eaf1;border-radius:16px;padding:22px}
+.mrk-blog-card h3{margin:0 0 8px;color:var(--mrk-navy);font-size:18px}
+.mrk-blog-card p{color:var(--mrk-muted);font-size:14px;line-height:1.6}
+.mrk-cta{background:linear-gradient(135deg,var(--mrk-blue),var(--mrk-navy));color:#fff;border-radius:24px;padding:48px;text-align:center}
+.mrk-cta h2{color:#fff;margin:0 0 10px;font-size:clamp(28px,4vw,42px)}
+.mrk-cta p{color:#dbe7f5;margin:0 auto 24px;max-width:700px}
+.mrk-footer-brand{background:var(--mrk-navy);color:#fff}
+@media(max-width:900px){.mrk-hero-grid,.mrk-project{grid-template-columns:1fr}.mrk-grid{grid-template-columns:repeat(2,1fr)}.mrk-products{grid-template-columns:repeat(2,1fr)}.mrk-blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.mrk-container{width:min(100% - 24px,1180px)}.mrk-hero{padding:64px 0 54px}.mrk-section{padding:52px 0}.mrk-grid,.mrk-products,.mrk-blog-grid{grid-template-columns:1fr}.mrk-project,.mrk-cta{padding:26px}.mrk-section-head{display:block}}
